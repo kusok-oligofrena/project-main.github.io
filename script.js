@@ -15,11 +15,11 @@ output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро по
 output.insertAdjacentHTML("beforeend", `
 <pre>
 
- ▓▓▓  ▓   ▓ ▓▓▓▓      ▓▓▓    ▓   
-▓     ▓▓ ▓▓ ▓   ▓    ▓   ▓  ▓▓   
-▓     ▓ ▓ ▓ ▓   ▓    ▓   ▓   ▓   
-▓     ▓   ▓ ▓   ▓    ▓   ▓   ▓   
- ▓▓▓  ▓   ▓ ▓▓▓▓      ▓▓▓   ▓▓▓  
+ ▓▓▓  ▓   ▓ ▓▓▓▓    
+▓     ▓▓ ▓▓ ▓   ▓ 
+▓     ▓ ▓ ▓ ▓   ▓   
+▓     ▓   ▓ ▓   ▓    
+ ▓▓▓  ▓   ▓ ▓▓▓▓  
 
 </pre>
 `);
