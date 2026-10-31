@@ -1,14 +1,14 @@
 const input = document.querySelector(".input");
 const output = document.querySelector(".output");
 const commands = [
-    "<p>> <span class='green'>help</span> - показать список команд</p>",
-    "<p>> <span class='green'>about</span> - о проекте</p>",
-    "<p>> <span class='green'>ls</span> - список доступных глав</p>",
-    "<p>> <span class='green'>clear</span> - очистить терминал</p>",
+    "<p>> <span class='green'>help</span> - <span class='gray'>показать список команд</span></p>",
+    "<p>> <span class='green'>about</span> - <span class='gray'>о проекте</span></p>",
+    "<p>> <span class='green'>ls</span> - <span class='gray'>список доступных глав</span></p>",
+    "<p>> <span class='green'>clear</span> - <span class='gray'>очистить терминал</span></p>",
 ];
 const ls = [
-    "<p>> <span class='green'>ch.1</span> - глава 1: unit-07</p>",
-    "<p>> <span class='green'>ch.2</span> - глава 2: breathing</p>"
+    "<p>> <span class='green'>ch.1</span> - <span class='gray'>глава 1: unit-07</span></p>",
+    "<p>> <span class='green'>ch.2</span> - <span class='gray'>глава 2: breathing</span></p>"
 ]
 
 output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать, для навигации используйте команду help</p>");
@@ -38,7 +38,7 @@ input.addEventListener("keydown", function(event) {
         }
 
         else if (command === "about") {
-            output.insertAdjacentHTML("beforeend", "<p>> <span class='orange'>пишу я книгу/рассказ, но markdown формата, как в .fb2 файлах, на большинстве сайтов по типу wattpad, fickbook и telegra.ph меня вообще не устраивают и не дают нужной творческой свободы. личный сайт же решит эту проблему, и я смогу оформлять книгу/рассказ как угодно. ну, например я сделал консоль, из которой пользователь будет попадать на нужную главу путем использования команды ch.(вставьте нужное число). весело же!</span></p>");
+            output.insertAdjacentHTML("beforeend", "<p>> пишу я книгу/рассказ, но markdown формата, как в .fb2 файлах, на большинстве сайтов по типу wattpad, fickbook и telegra.ph меня вообще не устраивают и не дают нужной творческой свободы. личный сайт же решит эту проблему, и я смогу оформлять книгу/рассказ как угодно. ну, например я сделал консоль, из которой пользователь будет попадать на нужную главу путем использования команды ch.(вставьте нужное число). весело же!</p>");
             output.scrollTop = output.scrollHeight;
         }
 
@@ -67,7 +67,7 @@ input.addEventListener("keydown", function(event) {
             input.value = "";
         }
 
-        else output.insertAdjacentHTML("beforeend", "<p class='red'>> Неизвестная команда</p>");
+        else output.insertAdjacentHTML("beforeend", "<p class='red'>> неизвестная команда</p>");
             output.scrollTop = output.scrollHeight;
             input.value = "";
         }
