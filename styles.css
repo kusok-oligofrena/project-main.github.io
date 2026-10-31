@@ -23,6 +23,7 @@ body {
 
 .field {
     display: flex;
+    margin-bottom: 1em;
 }
 
 .arrow {
@@ -37,6 +38,8 @@ body {
     outline: none;
 
     flex: 1;
+
+    border: 3px solid red;
 }
 
 /* Цвета */
