@@ -15,14 +15,16 @@ output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро по
 output.insertAdjacentHTML("beforeend", `
 <pre>
 
- ▓▓▓  ▓   ▓ ▓▓▓▓    
-▓     ▓▓ ▓▓ ▓   ▓ 
-▓     ▓ ▓ ▓ ▓   ▓   
-▓     ▓   ▓ ▓   ▓    
- ▓▓▓  ▓   ▓ ▓▓▓▓  
 
-разработка проекта
-▰═════════ 1%
+   ▓▓▓  ▓   ▓ ▓▓▓▓    
+  ▓     ▓▓ ▓▓ ▓   ▓ 
+  ▓     ▓ ▓ ▓ ▓   ▓   
+  ▓     ▓   ▓ ▓   ▓    
+   ▓▓▓  ▓   ▓ ▓▓▓▓  
+
+[ разработка проекта: ]
+    ▰═════════ 1%
+
 </pre>
 `);
 
@@ -30,7 +32,7 @@ input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         const command = input.value.toLowerCase();
         if (command === "help") {
-            output.insertAdjacentHTML("beforeend", "<p>> доступные команды:</p>");
+            output.insertAdjacentHTML("beforeend", "<p>[ доступные команды: ]</p>");
             for (const commandName of commands) {
             output.insertAdjacentHTML("beforeend", "<p>" + commandName + "</p>");
             output.scrollTop = output.scrollHeight;
@@ -38,12 +40,13 @@ input.addEventListener("keydown", function(event) {
         }
 
         else if (command === "about") {
-            output.insertAdjacentHTML("beforeend", "<p>> пишу я книгу/рассказ, но markdown формат, как в .fb2 файлах, на большинстве сайтов по типу wattpad, fickbook и telegra.ph меня вообще не устраивают и не дают нужной творческой свободы. личный сайт же решит эту проблему, и я смогу оформлять книгу/рассказ как угодно. ну, например я сделал консоль, из которой пользователь будет попадать на нужную главу путем использования команды ch.(вставьте нужное число). весело же!</p>");
+            output.insertAdjacentHTML("beforeend", "<p>[ о проекте: ]</p>");
+            output.insertAdjacentHTML("beforeend", "<p>> <span class='gray'>пишу я книгу/рассказ, но markdown формат, как в .fb2 файлах, на большинстве сайтов по типу wattpad, fickbook и telegra.ph меня вообще не устраивают и не дают нужной творческой свободы. личный сайт же решит эту проблему, и я смогу оформлять книгу/рассказ как угодно. ну, например я сделал консоль, из которой пользователь будет попадать на нужную главу путем использования команды ch.(вставьте нужное число). весело же!</span></p>");
             output.scrollTop = output.scrollHeight;
         }
 
         else if (command === "ls") {
-            output.insertAdjacentHTML("beforeend", "<p>> доступные главы: <span class='orange'>(тестовая команда, еще ничего не доступно)</span></p>");
+            output.insertAdjacentHTML("beforeend", "<p>[ доступные главы: ] <span class='orange'>(!) тестовая команда, еще ничего не доступно</span></p>");
             for (const commandName of ls) {
             output.insertAdjacentHTML("beforeend", "<p>" + commandName + "</p>");
             output.scrollTop = output.scrollHeight;
