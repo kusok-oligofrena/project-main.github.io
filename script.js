@@ -21,6 +21,8 @@ output.insertAdjacentHTML("beforeend", `
 ▓     ▓   ▓ ▓   ▓    
  ▓▓▓  ▓   ▓ ▓▓▓▓  
 
+разработка проекта
+▰═════════ 10%
 </pre>
 `);
 
@@ -50,6 +52,7 @@ input.addEventListener("keydown", function(event) {
 
         else if (command === "clear") {
             output.innerHTML = "";
+            output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать. для навигации используйте команду help.</p>");
         }
 
         else output.insertAdjacentHTML("beforeend", "<p class='red'>> Неизвестная команда</p>");
