@@ -26,7 +26,7 @@ output.insertAdjacentHTML("beforeend", `
 
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        const command = input.value;
+        const command = input.value.toLowerCase();
         if (command === "help") {
             output.insertAdjacentHTML("beforeend", "<p>> доступные команды:</p>");
             for (const commandName of commands) {
