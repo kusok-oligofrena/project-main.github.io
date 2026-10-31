@@ -11,7 +11,7 @@ const ls = [
     "<p>> <span class='green'>ch.2</span> - глава 2: breathing</p>"
 ]
 
-output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать. для навигации используйте команду help.</p>");
+output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать, для навигации используйте команду help</p>");
 output.insertAdjacentHTML("beforeend", `
 <pre>
 
@@ -22,7 +22,7 @@ output.insertAdjacentHTML("beforeend", `
  ▓▓▓  ▓   ▓ ▓▓▓▓  
 
 разработка проекта
-▰═════════ 10%
+▰═════════ 1%
 </pre>
 `);
 
@@ -38,7 +38,7 @@ input.addEventListener("keydown", function(event) {
         }
 
         else if (command === "about") {
-            output.insertAdjacentHTML("beforeend", "<p>> <span class='orange'>это малюсенькая демонстрация амбициознейшей хуйни, которой я когда-либо занимался наверное. магнум опус(!) если позволите. мне очень не хватало возможностей wattpad, telegra.ph, да и в целом написания рассказов/книг через обычный markdown формат. я люблю погружение, атмосферность, да и в конце концов медиа-контент. поэтому решил перенести свою книгу(?), если ее можно таковой назвать, на данный сайт, где я смогу красивенько, атмосферно, и самое главное с развязанными руками оформлять каждую буковку текста. вставлять кнопки, ведущие на саундтрек главы. отражать состояние героя не только описанием или другим шрифтом реплики, а отдельными визуальными вставками в страничке главы. короче говоря, по задумке это absolute cinema с возможностью небольшой интерактивности. надеюсь что не забью через пару дней. :3</span></p>");
+            output.insertAdjacentHTML("beforeend", "<p>> <span class='orange'>пишу я книгу/рассказ, но markdown формата, как в .fb2 файлах, на большинстве сайтов по типу wattpad, fickbook и telegra.ph меня вообще не устраивают и не дают нужной творческой свободы. личный сайт же решит эту проблему, и я смогу оформлять книгу/рассказ как угодно. ну, например я сделал консоль, из которой пользователь будет попадать на нужную главу путем использования команды ch.(вставьте нужное число). весело же!</span></p>");
             output.scrollTop = output.scrollHeight;
         }
 
@@ -52,12 +52,24 @@ input.addEventListener("keydown", function(event) {
 
         else if (command === "clear") {
             output.innerHTML = "";
-            output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать. для навигации используйте команду help.</p>");
+            output.insertAdjacentHTML("beforeend", "<p>> <span class='green'>добро пожаловать, для навигации используйте команду help</p>");
+        }
+
+        else if (command === "sv.cheats 1") {
+            output.insertAdjacentHTML("beforeend", "<p class='red'>> для чего тебе здесь читы? чего ты хочешь, псих?</p>");
+            output.scrollTop = output.scrollHeight;
+            input.value = "";
+        }
+
+        else if (command === "/gamemode 1") {
+            output.insertAdjacentHTML("beforeend", "<p class='red'>> ага, /give @s minecraft:diamond_block 64</p>");
+            output.scrollTop = output.scrollHeight;
+            input.value = "";
         }
 
         else output.insertAdjacentHTML("beforeend", "<p class='red'>> Неизвестная команда</p>");
-        output.scrollTop = output.scrollHeight;
-        input.value = "";
+            output.scrollTop = output.scrollHeight;
+            input.value = "";
         }
 });
 
